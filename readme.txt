@@ -1,5 +1,6 @@
 === WooCommerce PlatiPosle Payment Gateway ===
-Tags: platiposle, plati posle, woocommerce, payment gateway
+Contributors: platiposle.bg
+Tags: platiposle, plati posle, woocommerce, payment gateway, плати после
 Requires at least: 2.7
 Tested up to: 3.2.1
 Stable tag: 1.0
