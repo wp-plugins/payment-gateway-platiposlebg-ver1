@@ -1,7 +1,13 @@
-﻿=================================
-== Install ======================
-Upload and install in WooCommerce.
+=== Add icons to sidebar of categories and pages ===
+Tags: platiposle, plati posle, woocommerce, payment gateway
+Requires at least: 2.7
+Tested up to: 3.2.1
+Stable tag: 1.0
+== Description ==
 
+== Installation ==
+
+Upload and install in WooCommerce.
 
 Стъпки за инсталация на модул за отложено плащане 'Плати После':
 
