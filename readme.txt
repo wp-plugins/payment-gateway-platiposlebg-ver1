@@ -1,4 +1,4 @@
-=== Add icons to sidebar of categories and pages ===
+=== Add Woocommerce PlatiPosle Payment Gateway ===
 Tags: platiposle, plati posle, woocommerce, payment gateway
 Requires at least: 2.7
 Tested up to: 3.2.1
