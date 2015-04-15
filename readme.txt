@@ -1,4 +1,4 @@
-=== Add Woocommerce PlatiPosle Payment Gateway ===
+=== WooCommerce PlatiPosle Payment Gateway ===
 Tags: platiposle, plati posle, woocommerce, payment gateway
 Requires at least: 2.7
 Tested up to: 3.2.1
