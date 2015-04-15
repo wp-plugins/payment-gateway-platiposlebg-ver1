@@ -2,7 +2,7 @@
 /*
 	Plugin Name: WooCommerce Plati Posle Payment Gateway Free
 	Plugin URI: http://www.platiposle.bg
-	Description: Платежен метод <strong>Плати После</strong> дава възможност на клиентите да плащат своите поръчки до 15 календарни дни след получаване на стоката без никакво оскъпяване.
+	Description: 'Плати После' - метод за отложено плащане
 	Version: 2015.4.8
 	Author: Плати После
 	Author URI: http://www.platiposle.bg/
