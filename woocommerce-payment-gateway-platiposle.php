@@ -3,7 +3,7 @@
 	Plugin Name: WooCommerce Plati Posle Payment Gateway Free
 	Plugin URI: http://www.platiposle.bg
 	Description: 'Плати После' - метод за отложено плащане
-	Version: 2015.7.8
+	Version: 2015.7.28
 	Author: Плати После
 	Author URI: http://www.platiposle.bg/
 */
