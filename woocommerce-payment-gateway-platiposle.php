@@ -3,7 +3,7 @@
 	Plugin Name: WooCommerce Plati Posle Payment Gateway Free
 	Plugin URI: http://www.platiposle.bg
 	Description: 'Плати После' - метод за отложено плащане
-	Version: 2015.4.8
+	Version: 2015.7.28
 	Author: Плати После
 	Author URI: http://www.platiposle.bg/
 */
@@ -296,13 +296,16 @@ jQuery(function(){
         global $woocommerce;
 
         $total = WC()->cart->cart_contents_total;
-        $configParams = file_get_contents('https://platiposle.bg/config');
+        $configParams = pp_curl();
         $config = json_decode($configParams);
         $order_amount_min = $order_amount_max = 0;
         if($config){
             $order_amount_min = $config->order_amount_min;
             $order_amount_max = $config->order_amount_max;
-        }
+        } else{
+			$order_amount_min = 50;
+			$order_amount_max = 1500;
+		}
 
         if (!($total >= $order_amount_min && $total <= $order_amount_max))
             unset($gateways['platiposle']);
@@ -325,7 +328,7 @@ jQuery(function(){
         }
 
         if ($file == $this_plugin) {
-            $sSettings = __( 'Settings' , 'akismet');
+            $sSettings = __( 'Settings' , 'platiposle');
             if ( version_compare( WOOCOMMERCE_VERSION, "2.1" ) <= 0 ) {
                 $settings_link = '<a href="' . get_bloginfo('wpurl') . '/wp-admin/admin.php?page=woocommerce_settings&tab=payment_gateways&section=wc_platiposle_gateway">' . $sSettings . '</a>';
             } elseif (version_compare( WOOCOMMERCE_VERSION, "2.3.7" ) <= 0)
@@ -342,6 +345,24 @@ jQuery(function(){
         return $links;
     }
 
+	function pp_curl()
+	{
 
+		$ch = curl_init();
+
+		curl_setopt($ch, CURLOPT_URL, 'https://platiposle.bg/config');
+		curl_setopt($ch, CURLOPT_POST, 1);
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+		curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
+		curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE);
+
+		$server_output = curl_exec($ch);
+
+		$err = curl_error($ch);
+
+		curl_close($ch);
+
+		return $server_output;
+	}
 
 }
